@@ -1,4 +1,12 @@
+# mh-config
+mh-config is a zero-dependency module that helps provide configuration to your existing or new applications in no time.
+
+> Storing configuration separate from code (not hard-coding) is based on The Twelve-Factor App methodology.
+
+# TOC
 - [mh-config](#mh-config)
+- [TOC](#toc)
+- [Introduction](#introduction)
     - [Key features](#key-features)
     - [Comparison](#comparison)
 - [Installation](#installation)
@@ -11,11 +19,7 @@
 - [License](#license)
 
 
-# mh-config
-mh-config is a zero-dependency module that helps provide configuration to your existing or new applications in no time.
-
-> Storing configuration separate from code (not hard-coding) is based on The Twelve-Factor App methodology.
-
+# Introduction
 ### Key features
 - Specify configuration in any file format: ini/json/js
 - Provide these configurations either via a config object or simply process environment variables
@@ -55,7 +59,7 @@ if (config.error) {
 
 // assuming a file named config.ini exists with username=notadmin, then
 
-// USE eiher of the following:
+// USE either of the following:
 process.env['username']
 // OR
 config['username']
@@ -64,19 +68,19 @@ config['username']
 ## Usage-2 Without modifying your code
 ```bash
 node -r mh-config/do <yourApp.js> config_option_debug=true
-                                # ^^^^^^^^^^^^^^^^^^^^^^^^additional config options
+      # additional config options ^^^^^^^^^^^^^^^^^^^^^^^^
 ```
 ```js
 // yourApp.js
 
-// somewhere in your app
-something(process.env['username']) // username was set by mh-config, if options.setEnv = true
+// USE either of the following:
+process.env['username']
 // OR
-something(config['username']) // username was set by mh-config
+config['username']
 ```
 
 # The config file
-By default, mh-config looks for a suitable file in the current working directiry (cwd), usually the root of the project.
+By default, mh-config looks for a suitable file in the current working directory (cwd), usually the root of the project.
 A suitable file is one of the following formats:
 - .ini
 - .json
