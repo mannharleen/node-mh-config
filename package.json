@@ -1,6 +1,6 @@
 {
   "name": "mh-config",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "mh-config is a zero-dependency module that helps provide configuration to your existing or new applications in no time",
   "main": "index.js",
   "scripts": {
