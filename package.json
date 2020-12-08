@@ -1,12 +1,16 @@
 {
   "name": "mh-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "node index.test.js"
   },
-  "keywords": ["config", "dotenv", "reload"],
+  "keywords": [
+    "config",
+    "dotenv",
+    "reload"
+  ],
   "author": "harleen mann",
   "license": "MIT"
 }
